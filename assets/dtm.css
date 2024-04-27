@@ -559,7 +559,7 @@ address {
 .footer {
   overflow: hidden;
   text-align: center;
-  background: linear-gradient(to right, #1e3799 0%, #1b63c2 50%, #1e3799 100%);
+  background: #0a275c;
   color: white;
   --color-body-text: white;
 }
@@ -3568,7 +3568,7 @@ address {
 .checkout__action-text {
   text-align: center;
 }
-.checkout__ssl > img {
+.checkout__warning > img {
   margin: auto;
 }
 
