@@ -1,0 +1,280 @@
+<main aria-label="Main offer" class="view main-offer main-offer--container section">
+  <div id="main" class="view__anchor"></div>
+  <div class="view__in main-offer__in section__in">
+    <div class="main-offer__group">
+      <div class="main-offer__offer">
+        <b class="main-offer__banner banner banner--ribbon">
+            <span>Exclusive Web Offer!</span>
+        </b>
+        <div class="main-offer__offer-group">
+            <div class="main-offer__header">
+                <h1 class="main-offer__title" id="main-title"><b>Double Offer</b><sup>*</sup></h1>
+                <small>*Separate $5.99 P&H for the 2nd set</small>
+              </div>
+              <div class="main-offer__price-group">
+                <div class="main-offer__price">
+                  <div class="sr">
+                    <div class="sr__text">Now Only $19.99</div>
+                    <div class="offer" aria-hidden="true" role="presentation">
+                      <span class="offer__standfirst">Now Only</span>
+                      <span class="offer__currency">$</span>
+                      <span class="offer__amt">19</span>
+                      <span class="offer__follow">
+                        <span class="offer__cent">99</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-offer__order">
+                  <a
+                    href="#order"
+                    title="Order {{ shop.name }} Now!"
+                    class="dtm-button"
+                    >
+                    <span>Order Now!</span>
+                    </a
+                  >
+                  <div class="main-offer__payment"></div>
+                </div>
+              </div>
+        </div>
+
+        <div class="main-offer__products">
+            <div class="slide slide--fade">
+                <div class="slide__into" tabindex="0" id="features-slider">
+                  <picture class="slide__item">
+                    <img
+                      src="{{ 'product1.jpg' | asset_url }}"
+                      alt=""
+                      width="535"
+                      height="215"
+                    >
+                  </picture>
+                  <picture class="slide__item">
+                    <img
+                      src="{{ 'product2.jpg' | asset_url }}"
+                      alt=""
+                      width="535"
+                      height="215"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <picture class="slide__item">
+                    <img
+                      src="{{ 'product3.jpg' | asset_url }}"
+                      alt=""
+                      width="535"
+                      height="215"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <picture class="slide__item">
+                    <img
+                      src="{{ 'product4.jpg' | asset_url }}"
+                      alt=""
+                      width="535"
+                      height="215"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <picture class="slide__item">
+                    <img
+                      src="{{ 'product5.jpg' | asset_url }}"
+                      alt=""
+                      width="535"
+                      height="215"
+                      loading="lazy"
+                    >
+                  </picture>
+                </div>
+                <div class="slide__nav">
+                  <button aria-label="Previous" class="slide__prev" type="button">
+                    <svg class="icon">
+                      <use href="#icon-chevron"></use>
+                    </svg>
+                  </button>
+                  <button aria-label="Next" class="slide__next" type="button">
+                    <svg class="icon">
+                      <use href="#icon-chevron"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+        </div>
+
+        <picture class="main-offer__footer">
+            <img src="{{ 'magic-tracks-includes.png' | asset_url }}" alt="" width="535" height="74">
+        </picture>
+      </div>
+      <div class="main-offer__content">
+        <div id="video" class="contain contain--video">
+          <iframe
+            loading="lazy"
+            src="https://player.vimeo.com/video/413160471?autopause=0"
+            frameborder="0"
+            allow="fullscreen"
+            title="Magic Tracks video"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="features-benefits">
+            <h2 id="features-benefits-title" class="features-benefits__title">Features &amp; Benefits</h2>
+            <ul class="features-benefits__list">
+              <li>Bend, flex, and curve the track in any direction</li>
+              <li>Just snap the pieces together and in seconds you have a custom speedway</li>
+              <li>Track pieces glow in the dark</li>
+              <li>LED light up race cars keep the track glowing</li>
+              <li>Rolls up for easy storage</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section aria-labelledby="in-use-title" class="view content content--in-use section">
+  <div id="in-use" class="view__anchor"></div>
+  <div class="view__in section__in">
+    <h2 id="in-use-title" class="content__title">
+        <span>Change the track into <b>Any Shape or Pattern!</b></span>
+        <span>You'll never have the same race twice!</span>
+    </h2>
+    <div class="content__carousel">
+        <div class="slide slide--responsive">
+            <div class="slide__into" tabindex="0" id="use-slider">
+              <div class="content__item slide__item">
+                <figure>
+                  <picture>
+                    <img src="{{ 'great1.jpg' | asset_url }}" alt="" width="270" height="160">
+                  </picture>
+                  <figcaption>
+                    <b>Serpentine Design</b>
+                    Allows Magic Tracks® to bend, flex, and curve in any direction
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="content__item slide__item">
+                <figure>
+                  <picture>
+                    <img src="{{ 'great2.jpg' | asset_url }}" alt="" width="270" height="160">
+                  </picture>
+                  <figcaption>
+                    <b>GLOW IN THE DARK</b>
+                    The track's neon colors shine super bright
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="content__item slide__item">
+                <figure>
+                  <picture>
+                    <img src="{{ 'great3.jpg' | asset_url }}" alt="" width="270" height="160">
+                  </picture>
+                  <figcaption>
+                    <b>LED LIGHTS</b>
+                    Race car's 5 LED lights keep the track glowing as it keeps going
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="content__item slide__item">
+                <figure>
+                  <picture>
+                    <img src="{{ 'great4.jpg' | asset_url }}" alt="" width="270" height="160">
+                  </picture>
+                  <figcaption>
+                    <b>PIECES SNAP TOGETHER</b>
+                    Build a custom speedway in seconds
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="content__item slide__item">
+                <figure>
+                  <picture>
+                    <img src="{{ 'great5.jpg' | asset_url }}" alt="" width="270" height="160">
+                  </picture>
+                  <figcaption>
+                    <b>TRACK ROLLS UP</b>
+                    For quick and easy storage
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="content__item slide__item">
+                <figure>
+                  <picture>
+                    <img src="{{ 'great6.jpg' | asset_url }}" alt="" width="270" height="160">
+                  </picture>
+                  <figcaption>
+                    <b>ENDLESS FUN</b>
+                    You'll never have the same race twice
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="slide__nav">
+              <button aria-label="Previous" class="slide__prev" type="button">
+                <svg class="icon">
+                  <use href="#icon-chevron"></use>
+                </svg>
+              </button>
+              <button aria-label="Next" class="slide__next" type="button">
+                <svg class="icon">
+                  <use href="#icon-chevron"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="intro-title" class="view content content--picture-text section">
+  <div id="intro" class="view__anchor"></div>
+  <div class="view__in section__in">
+    <div class="section__block">
+      <div class="content__group">
+        <div class="content__text">
+          <h2 id="intro-title" class="content__title">
+            Bend it, Curve it to the Max!
+          </h2>
+          <p>
+            <b>{{ shop.name }}</b> are the totally new cool race tracks that bend and glow like you've never seen before. You can bend, flex, and curve the track magically in 360˚ however you want – even while the race car is zooming around.
+          </p>
+          <p>
+            Just snap the pieces together and you get a fully customized speedway of your own creation. And even better, when you turn off the light, <b>{{ shop.name }}</b> glows super bright!
+          </p>
+          <div class="content__footer">
+            <a
+              href="#order"
+              class="dtm-button"
+              >
+                <span>Order Now</span>
+              </a
+            >
+          </div>
+        </div>
+        <picture class="content__picture">
+          <img src="{{ 'magic-tracks-car.jpg' | asset_url }}" alt="" width="390" height="245" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg hidden>
+  <symbol id="icon-chevron" x="0px" y="0px" viewBox="0 0 25.228 14.029">
+      <g transform="translate(1.414 1.414)">
+          <path d="M0,11.2,11.2,0m0,22.4L0,11.2" transform="translate(0 11.2) rotate(-90)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+  </symbol>
+</svg>
+
+{% schema %}
+{
+  "name": "Main Offer",
+  "settings": [],
+  "presets": [{ "name": "Main Offer" }],
+  "disabled_on": { "groups": ["header", "footer"] }
+}
+{% endschema %}
+{% stylesheet %} {% endstylesheet %}
+{% javascript %} {% endjavascript %}

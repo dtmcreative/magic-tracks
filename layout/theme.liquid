@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
+<html class="dtm no-js test" lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,6 +27,8 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+
+    <script src="{{ 'dtm.js' | asset_url }}" defer></script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -251,7 +253,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'base.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -280,12 +282,20 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <link rel="preconnect" href="https://use.typekit.net/" crossorigin>
+    <link rel="dns-prefetch" href="https://use.typekit.net/">
+    <link rel="stylesheet" href="https://use.typekit.net/heu5kgm.css">
+
+    <link rel="stylesheet" href="{{ 'dtm.css' | asset_url }}">
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
+  <body class="dtm__in gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    {% comment %}
+      <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+        {{ 'accessibility.skip_to_text' | t }}
+      </a>
+    {% endcomment %}
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
@@ -293,9 +303,11 @@
 
     {% sections 'header-group' %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
+    <div class="wrapper">
+        <div class="wrapper__in">
+            {{ content_for_layout }}
+        </div>
+    </div>
 
     {% sections 'footer-group' %}
 
@@ -342,12 +354,21 @@
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
         recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
-        countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {% comment %}
+      {%- if settings.predictive_search_enabled -%}
+        <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      {%- endif -%}
+    {% endcomment %}
+
+    <svg hidden>
+      <symbol id="icon-chevron" x="0px" y="0px" viewBox="0 0 25.228 14.029">
+          <g transform="translate(1.414 1.414)">
+              <path d="M0,11.2,11.2,0m0,22.4L0,11.2" transform="translate(0 11.2) rotate(-90)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+      </symbol>
+    </svg>
   </body>
 </html>

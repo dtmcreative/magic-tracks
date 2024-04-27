@@ -1,0 +1,24 @@
+$select: ".wrapper" !default;
+
+// config
+@use "./../config/queries";
+
+// abstracts
+@use "Shared/scss/templates/base/abstracts/background";
+
+@mixin base {
+    #{$select} {
+        @include background.image-container() {
+            background: url(bg.png) center top -10em no-repeat black;
+        };
+
+        &__in {
+            max-width: calc(queries.get(section-max) + 2rem);
+            margin-inline: auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        @content;
+    }
+}

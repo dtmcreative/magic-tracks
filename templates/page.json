@@ -6,9 +6,16 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "offer_selection_FHzRPY": {
+      "type": "offer-selection",
+      "settings": {
+        "collection": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "offer_selection_FHzRPY"
   ]
 }
