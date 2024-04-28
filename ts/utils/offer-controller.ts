@@ -49,12 +49,12 @@ export default class OfferController extends CartController {
 		if (!offerCombobox) return;
 
 		const singleOffer = await this.products.getProductVariantBySku(
-			"AABPC"
+			"MTRK19R"
 		);
 		const doubleOffer = await this.products.getProductVariantBySku(
-			"AABPCTV"
+			"MTRK19TV"
 		);
-		const fee = await this.products.getProductVariantBySku("AABPCFEE");
+		const fee = await this.products.getProductVariantBySku("MTFEE");
 
 		const changeToSingleOffer = (quantity: number) => {
 			this.updateItems({

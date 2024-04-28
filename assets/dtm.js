@@ -17310,13 +17310,13 @@ var OfferController = /** @class */ (function (_super) {
                         offerCombobox = _this.offerCombobox;
                         if (!offerCombobox)
                             return [2 /*return*/];
-                        return [4 /*yield*/, _this.products.getProductVariantBySku("AABPC")];
+                        return [4 /*yield*/, _this.products.getProductVariantBySku("MTRK19R")];
                     case 1:
                         singleOffer = _a.sent();
-                        return [4 /*yield*/, _this.products.getProductVariantBySku("AABPCTV")];
+                        return [4 /*yield*/, _this.products.getProductVariantBySku("MTRK19TV")];
                     case 2:
                         doubleOffer = _a.sent();
-                        return [4 /*yield*/, _this.products.getProductVariantBySku("AABPCFEE")];
+                        return [4 /*yield*/, _this.products.getProductVariantBySku("MTFEE")];
                     case 3:
                         fee = _a.sent();
                         changeToSingleOffer = function (quantity) {

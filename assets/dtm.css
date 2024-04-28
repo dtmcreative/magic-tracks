@@ -162,7 +162,7 @@ html {
   color: #2a4d64;
 }
 .color-alt {
-  color: #99eb8b;
+  color: #0c3786;
 }
 .color-callout {
   color: #00898f;
@@ -525,7 +525,7 @@ address {
   }
 }
 .header__logo {
-  max-width: 17.6875em;
+  max-width: 14em;
   margin-bottom: -2em;
   width: 100%;
 }
@@ -561,6 +561,7 @@ address {
   text-align: center;
   background: #0a275c;
   color: white;
+  --section-container: none;
   --color-body-text: white;
 }
 .footer nav {
@@ -934,7 +935,7 @@ address {
 }
 
 .offer {
-  color: #3c434e;
+  color: #ffcf67;
   font-size: var(--offer-font-size, 3em);
 }
 .offer__standfirst {
@@ -1101,6 +1102,8 @@ address {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: white;
+  color: #000000;
 }
 .features-benefits > * + * {
   margin-top: 1rem;
@@ -1130,12 +1133,14 @@ address {
   outline-color: white;
 }
 .features-benefits__list {
-  max-width: 25em;
+  max-width: 15em;
   text-align: left;
   font-size: 1.0625em;
   font-weight: 500;
+  margin-bottom: 1rem;
   margin-left: 1.5rem;
   list-style: none;
+  margin-left: 0;
 }
 .features-benefits__list > * {
   break-inside: avoid;
@@ -1624,6 +1629,9 @@ address {
   text-align: center;
   overflow: hidden;
   font-family: montserrat, Helvetica, sans-serif;
+  background: url(bg_offer.png) repeat white;
+  background-size: cover;
+  color: white;
 }
 .main-offer img {
   margin: 0 auto;
@@ -1671,7 +1679,6 @@ address {
 }
 .main-offer__header {
   flex-basis: 100%;
-  color: #000000;
 }
 .main-offer__title {
   line-height: 1;
@@ -1682,7 +1689,7 @@ address {
 .main-offer__title > b {
   font-size: calc(5.25em / var(--base-number, 1));
   font-weight: 900;
-  color: #3c434e;
+  color: #ffcf67;
   text-transform: uppercase;
   line-height: 0.8;
 }
@@ -1766,7 +1773,11 @@ address {
   z-index: 2;
 }
 .main-offer__content {
+  align-self: stretch;
   flex: 0 1 19.125em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
 }
 .main-offer__content iframe {
   border: 1px solid black;
@@ -1781,7 +1792,6 @@ address {
   .main-offer__content {
     flex-basis: 100%;
     display: flex;
-    flex-direction: column-reverse;
     margin-top: 0;
   }
   .main-offer__price {
@@ -1863,12 +1873,18 @@ address {
 .content--picture-text {
   text-align: left;
   padding-bottom: 1em;
+  background: url(bg_offer.png) repeat white;
+  background-size: cover;
+  color: white;
+}
+.content--picture-text b {
+  color: #01f7ff;
 }
 .content--picture-text .content__block {
   margin-bottom: 0;
 }
 .content--picture-text .content__group {
-  --group-gap: 1rem;
+  --group-gap: 2rem 1rem;
 }
 .content--picture-text .content__picture {
   flex-basis: auto;
@@ -1879,17 +1895,18 @@ address {
 .content--picture-text .content__title {
   font-style: italic;
   font-size: 1.4375em;
+  color: #01f7ff;
 }
 @media all and (max-width: 60rem) {
   .content--picture-text .content__text {
     flex-basis: 100%;
-    max-width: 29.5625em;
+    max-width: 24.375em;
   }
 }
 
 .content--in-use {
-  background: #99eb8b;
-  color: #2a4d64;
+  background: #11529d;
+  color: white;
 }
 .content--in-use figure {
   margin: 1.5em auto;
@@ -1901,6 +1918,7 @@ address {
 }
 .content--in-use figure figcaption {
   margin-top: 0.75em;
+  max-width: 35ch;
 }
 .content--in-use figure figcaption > b {
   display: block;
@@ -1940,6 +1958,18 @@ address {
 }
 .content--in-use .content__title img {
   margin: 1em auto 0;
+}
+@media all and (max-width: 59.375rem) {
+  .content--in-use .content__title {
+    font-size: 1.5em;
+    align-items: center;
+  }
+  .content--in-use .content__title > span:first-child {
+    max-width: 20ch;
+  }
+  .content--in-use .content__title > span:last-child {
+    max-width: 20ch;
+  }
 }
 .content--in-use .content__carousel {
   margin-block: 1rem;
@@ -1991,13 +2021,13 @@ address {
 }
 
 .content--negative {
-  background: #99eb8b;
+  background: #0c3786;
   color: #2a4d64;
 }
 .content--negative::selection,
 .content--negative ::selection {
   background: #2a4d64;
-  color: #99eb8b;
+  color: #0c3786;
 }
 .content--negative a:focus,
 .content--negative button:focus,
@@ -3625,14 +3655,14 @@ address {
 }
 .fieldset__title {
   padding: 0.5em;
-  background: #ed2201;
+  background: #0c3786;
   color: white;
   font-size: 1.25em;
 }
 .fieldset__title::selection,
 .fieldset__title ::selection {
   background: white;
-  color: #ed2201;
+  color: #0c3786;
 }
 .fieldset__title a:focus,
 .fieldset__title button:focus,

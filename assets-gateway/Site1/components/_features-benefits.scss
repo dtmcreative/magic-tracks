@@ -18,6 +18,9 @@ $select: ".features-benefits" !default;
         flex-direction: column;
         align-items: center;
 
+        background: white;
+        color: colors.get(base);
+
         > * {
             width: 100%;
         }
@@ -39,13 +42,12 @@ $select: ".features-benefits" !default;
         }
 
         &__list {
-            max-width: 25em;
+            max-width: 15em;
 
             text-align: left;
             font-size: fonts.em(17);
             font-weight: 500;
-            // line-height: 1.2;
-            // margin-top: 0;
+            margin-bottom: 1rem;
 
             @include list.structure($gap: 0.75rem) ;
             @include list.bullet {
@@ -61,6 +63,7 @@ $select: ".features-benefits" !default;
                 position: absolute;
 
             }
+            margin-left: 0;
             li {
                 position: relative;
                 display: block;

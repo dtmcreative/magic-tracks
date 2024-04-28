@@ -51,7 +51,7 @@ $size: 0.5rem;
         &__title {
             padding: 0.5em;
             @include background.color-map(
-                $background-color: colors.get(primary),
+                $background-color: colors.get(alt),
                 $text-color: colors.get(base-light)
             );
 

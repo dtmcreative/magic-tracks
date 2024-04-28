@@ -17,6 +17,10 @@ $select: ".main-offer" !default;
 		overflow: hidden;
 		font-family: fonts.get(primary);
 
+        background: url(bg_offer.png) repeat white;
+		background-size: cover;
+		color: white;
+		
 		img {
 			margin: 0 auto;
 		}
@@ -35,7 +39,6 @@ $select: ".main-offer" !default;
 
 		&__header {
 			flex-basis: 100%;
-			color: colors.get(base);
 		}
 
 		&__title {
@@ -49,7 +52,7 @@ $select: ".main-offer" !default;
 			> b {
 				font-size: fonts.cascade-em(84);
 				font-weight: 900;
-				color: #3c434e;
+				color: #ffcf67;
 				text-transform: uppercase;
                 line-height: .8;
 			}
@@ -151,7 +154,13 @@ $select: ".main-offer" !default;
 		}
 
 		&__content {
+			align-self: stretch;
 			flex: 0 1 queries.em(306);
+			display: flex;
+			flex-direction: column;
+
+			margin-top: 1.5rem;
+			
 			iframe {
 				border: 1px solid black;
 			}
@@ -168,7 +177,7 @@ $select: ".main-offer" !default;
 				flex-basis: 100%;
 
 				display: flex;
-				flex-direction: column-reverse;
+				//flex-direction: column-reverse;
 
 				margin-top: 0;
 			}
