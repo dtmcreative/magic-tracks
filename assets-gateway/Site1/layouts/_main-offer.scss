@@ -17,7 +17,7 @@ $select: ".main-offer" !default;
 		overflow: hidden;
 		font-family: fonts.get(primary);
 
-        background: url(bg_offer.png) repeat white;
+        background: url(bg_offer.png) repeat colors.get(alt);
 		background-size: cover;
 		color: white;
 		

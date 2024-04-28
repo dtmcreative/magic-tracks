@@ -73,7 +73,7 @@ $select: ".content" !default;
             text-align: left;
             padding-bottom: 1em;
 
-            background: url(bg_offer.png) repeat white;
+            background: url(bg_offer.png) repeat colors.get(alt);
             background-size: cover;
             color: white;
 
